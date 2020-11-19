@@ -1,0 +1,29 @@
+<app-cabecera
+  [titulo] = "'chips'">
+</app-cabecera>
+
+<ion-content>
+  <p>
+    <ion-chip color="primary" mode="md" outline="false">
+      <ion-label>ion chip</ion-label>
+    </ion-chip>
+  </p>
+  <p>
+    <ion-chip color="secondary" mode="md" outline="false">
+      <ion-label>ion chip icon end</ion-label>
+      <ion-icon name="pin"></ion-icon>
+    </ion-chip>
+  </p>
+  <p>
+    <ion-chip color="success" mode="md" outline="false">
+      <ion-icon name="pin"></ion-icon>
+      <ion-label>ion chip icon start</ion-label>
+    </ion-chip>
+  </p>
+  <p>
+    <ion-chip #chipView color="danger" mode="md" outline="false">
+      <ion-label>ion chip con función</ion-label>
+      <ion-icon (click)="cerrarchip()" name="close-circle" color="success"></ion-icon>
+    </ion-chip>
+  </p>
+</ion-content>

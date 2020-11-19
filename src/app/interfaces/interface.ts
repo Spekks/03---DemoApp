@@ -1,0 +1,22 @@
+export interface Boton {
+    nombre: string;
+    ruta:   string;
+    color:  string;
+    icono:  string
+}
+
+export interface Page {
+    page:        number;
+    per_page:    number;
+    total:       number;
+    total_pages: number;
+    data:        User[]
+}
+
+export interface User {
+    id:         number;
+    email:      string;
+    first_name: string;
+    last_name:  string;
+    avatar:     string
+}

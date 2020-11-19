@@ -1,0 +1,56 @@
+<app-cabecera
+    [titulo] = "'Usuarios'">
+</app-cabecera>
+
+<ion-content>
+    <!-- Ion-refresher -->
+
+    <!-- <ion-refresher #miRefresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          refreshingSpinner="circles">
+        </ion-refresher-content>
+    </ion-refresher>-->
+
+    <!--<ion-list *ngFor="let u of usuarios">
+        <ion-item>
+            <ion-avatar slot="start">
+                <img src="{{u.avatar}}" />
+            </ion-avatar>
+            <ion-label>
+                <h2>{{u.first_name}} {{u.last_name}}</h2>
+                <p>{{u.email}}</p>
+            </ion-label>
+        </ion-item>
+    </ion-list>-->
+
+    <!-- Ion-infinite-scroll -->
+
+    <ion-card *ngFor="let u of usuarios">
+        <img src="{{u.avatar}}" />
+        <ion-card-header>
+            <ion-card-title>{{u.first_name}}</ion-card-title>
+            <ion-card-subtitle>{{u.last_name}}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+            {{u.email}}
+        </ion-card-content>
+    </ion-card>
+
+    <ion-infinite-scroll #miInfinite threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content
+          loadingSpinner="bubbles"
+          loadingText="Cargando datos...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    
+    <!-- Ion-fab-button -->
+    
+    <ng-template *ngIf="usuarios.length > 0;then this_content"></ng-template>
+        <ng-template #this_content>
+            <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+                <ion-fab-button (click)="onClick()">
+                    <ion-icon name="trash"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+        </ng-template>
+</ion-content>

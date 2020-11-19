@@ -1,0 +1,38 @@
+[
+    {
+      "nombre": "action-sheet",
+      "ruta": "/action-sheet",
+      "color": "primary",
+      "icono": "magnet"
+    },
+    {
+      "nombre": "alert",
+      "ruta": "/alert",
+      "color": "primary",
+      "icono": "alert"
+    },
+    {
+      "nombre": "usuarios",
+      "ruta": "/usuarios",
+      "color": "success",
+      "icono": "add"
+    },
+    {
+      "nombre": "loading",
+      "ruta": "/loading",
+      "color": "tertiary",
+      "icono": "reload-circle-sharp"
+    },
+    {
+      "nombre": "chips",
+      "ruta": "/chips",
+      "color": "warning",
+      "icono": "fast-food"
+    },
+    {
+      "nombre": "tabs",
+      "ruta": "/tabs",
+      "color": "dark",
+      "icono": "aperture"
+    }
+  ]

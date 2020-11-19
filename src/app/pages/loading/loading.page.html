@@ -1,0 +1,25 @@
+<app-cabecera
+    [titulo] = "'Loading'">
+</app-cabecera>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="onClick()" expand="block">
+    Loading por tiempo
+  </ion-button>
+  <ion-button (click)="presentaLoading2()" expand="block">
+    Loading como sercicio
+  </ion-button>
+
+  <ion-list *ngFor="let user of u">
+    <ion-item>
+        <ion-avatar slot="start">
+            <img src="{{user.avatar}}" />
+        </ion-avatar>
+        <ion-label>
+            <h2>{{user.first_name}} {{user.last_name}}</h2>
+            <p>{{user.email}}</p>
+        </ion-label>
+    </ion-item>
+  </ion-list>
+  <app-fabbutton></app-fabbutton>
+</ion-content>
